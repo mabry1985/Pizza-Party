@@ -3,13 +3,13 @@ function Orders(name) {
   this.order = [];
 };
 
-Orders.prototype.addPizza = function (pizza) {
-  this.order.push(pizza);
-};
-
 function Pizza(size) {
   this.size = size;
   this.toppings = [];
+};
+
+Orders.prototype.addPizza = function (pizza) {
+  this.order.push(pizza);
 };
 
 Pizza.prototype.cost = function () {
@@ -28,6 +28,10 @@ Pizza.prototype.cost = function () {
   });
 
   return total;
+};
+
+Pizza.prototype.addToppings = function (topping) {
+  this.toppings.push(topping);
 };
 
 var order1 = new Orders('Josh');
