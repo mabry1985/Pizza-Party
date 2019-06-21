@@ -1,5 +1,5 @@
 function Orders(name) {
-  this.customerName = name
+  this.customerName = name;
   this.order = [];
 };
 
@@ -7,8 +7,27 @@ Orders.prototype.addPizza = function (pizza) {
   this.order.push(pizza);
 };
 
-function Pizza() {
+function Pizza(size) {
+  this.size = size;
   this.toppings = [];
+};
+
+Pizza.prototype.cost = function () {
+  var sizeInput = parseInt($('input:radio[name=size]:checked').val());
+
+  toppingsArr = [];
+  $('input:checkbox[name=topping]:checked').each(function () {
+      var toppingInput = parseInt($(this).val());
+      toppingsArr.push(toppingInput);
+    });
+
+  var total = sizeInput;
+
+  toppingsArr.forEach(function (topping) {
+    total += topping;
+  });
+
+  return total;
 };
 
 var order1 = new Orders('Josh');
@@ -19,21 +38,6 @@ $(document).ready(function () {
   $('.form-one').submit(function (event) {
     event.preventDefault();
     var nameInput = $('input.name').val();
-    var sizeInput = parseInt($('input:radio[name=size]:checked').val());
-    toppingsArr = [];
-    $('input:checkbox[name=topping]:checked').each(function () {
-        var toppingInput = parseInt($(this).val());
-        toppingsArr.push(toppingInput);
-      });
-
-    var total = sizeInput;
-
-    toppingsArr.forEach(function (topping) {
-      total += topping;
-    });
-
-
-    console.log(total);
-    console.log(toppingsArr);
+    $('.output').html(nameInput + ' your total is $' + pizza1.cost() + '<br>PARTY ON!!!!!!');
   });
 });
