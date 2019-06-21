@@ -12,7 +12,8 @@ function Pizza(size) {
   this.toppings = [];
 };
 
-function Meat() {
+function Meat(name) {
+  this.name = name;
   this.cost = 1;
 }
 
@@ -31,15 +32,30 @@ Pizza.prototype.addToppings = function (topping) {
 var small = 10;
 var medium = 12;
 var large = 14;
-var pepperoni = new Meat();
-var sausage = new Meat();
-var ham = new Meat();
-var onion = new Veggie();
-var redPepper = new Veggie();
-var mushroom = new Veggie();
-var garlic = new Veggie();
-var pineapple = new Veggie();
-var jalepeno = new Veggie();
+var cheese = new Meat('Extra Cheese');
+var sauce = new Veggie('Extra Sauce');
+var pepperoni = new Meat('Pepperoni');
+var sausage = new Meat('Sausage');
+var ham = new Meat('Ham');
+var onion = new Veggie('Onions');
+var redPepper = new Veggie('Red Peppers');
+var mushroom = new Veggie('Mushrooms');
+var garlic = new Veggie('Crushed Garlic');
+var pineapple = new Veggie('Pineapple');
+var jalepeno = new Veggie('Jalepeno');
+var tomato = new Veggie('Tomatoes');
 
 var order = new Orders('Josh');
 var pizza1 = new Pizza(large);
+
+$(document).ready(function () {
+  $('.form-one').submit(function (event) {
+    event.preventDefault();
+    var size = $('input:radio[name=size]:checked').val();
+    console.log(size);
+    $('input:checkbox[name=topping]:checked').each(function () {
+        var test = $(this).val();
+        console.log(test);
+      });
+  });
+});
