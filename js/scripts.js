@@ -51,11 +51,14 @@ var pizza1 = new Pizza(large);
 $(document).ready(function () {
   $('.form-one').submit(function (event) {
     event.preventDefault();
-    var size = $('input:radio[name=size]:checked').val();
-    console.log(size);
+    var nameInput = $('input.name').val();
+    var sizeInput = $('input:radio[name=size]:checked').val();
+    console.log(nameInput);
+    console.log(sizeInput);
     $('input:checkbox[name=topping]:checked').each(function () {
-        var test = $(this).val();
-        console.log(test);
+        var toppingInput = $(this).val();
+
+        console.log(toppingInput);
       });
   });
 });
