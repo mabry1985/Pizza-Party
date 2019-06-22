@@ -42,6 +42,7 @@ $(document).ready(function () {
   $('.form-one').submit(function (event) {
     event.preventDefault();
     var nameInput = $('input.name').val();
-    $('.output').html(nameInput + ' your total is $' + pizza1.cost() + '<br>PARTY ON!!!!!!');
+    $('.output').fadeIn();
+    $('.output').html(nameInput + ' Your total is: <br> <strong>$ ' + pizza1.cost() + '</strong><br>PARTY ON!!!!!!');
   });
 });
