@@ -6,23 +6,23 @@ body.backdrop {
 
 h1 {
   color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
   position:relative;
   margin-bottom: 22px;
-  top: -5px;
-  left: 3px;
   font-size: 53px;
+  text-align: center;
   -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
   -moz-animation: neon6 1.5s ease-in-out infinite alternate;
   animation: neon6 1.5s ease-in-out infinite alternate;
 }
 
-h1:hover {
+h4, h5 {
   color: #ff00de;
-}
+  text-align: center;
+  }
 
-h1, h4, h5 {
-font-family: 'Orbitron', sans-serif;
-text-align: center;
+label, .meat, .veggies{
+  color:#ff00de;
 }
 
 .name {
@@ -44,7 +44,28 @@ text-align: center;
 .main {
   background-color: rgba(246, 246, 246, 0.95);
   max-width: 1170px;
+      height: 966px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+input.name:focus {
+    outline: none !important;
+    border:1px solid #ff00de;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ff00de;
+}
+
+::placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: lightgray;
+}
+
+::-ms-input-placeholder {
+  color: lightgray;
 }
 
 .radio {
@@ -71,7 +92,7 @@ input[name="topping"] {
   width: 350px;
   padding: 30px;
   border: solid 1px #ff00de;
-  top: 50%;
+  bottom: 311px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1060;
@@ -79,15 +100,18 @@ input[name="topping"] {
 
 
 .btn {
+  position: relative;
+  top: 85px;
   margin-top: 5px;
   text-align: center;
-  background: #ff00de;
-  color:#fff;
+  background: #fff;
+  color:#ff00de;
+  border: 1px solid #ff00de;
 }
 
 
 .btn:hover{
-  color:#fff;
+  color:#ff00de;
   -webkit-animation: button 1.5s ease-in-out infinite alternate;
   -moz-animation: button 1.5s ease-in-out infinite alternate;
   animation: button 1.5s ease-in-out infinite alternate;
@@ -179,5 +203,20 @@ input[name="topping"] {
   top: -553px;
   left: 502px;
   width: 154px;
+}
+
+.col-md-6 {
+  padding-left: 39px;
+}
+
+.meat {
+  padding-left: 75px;
+}
+}
+
+@media screen and (min-width: 991.97px) and (max-width: 1200px){
+
+.col-md-6 {
+  padding-left: 39px;
 }
 }
