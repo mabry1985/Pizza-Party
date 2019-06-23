@@ -1,10 +1,12 @@
-body {
-  background-image: url('../img/background.jpg')
+body.backdrop {
+  background-image: url('../img/background.jpg');
+  transition: all 0.9s ease-out 0s;
 
 }
 
 h1, h4, h5 {
 font-family: 'Orbitron', sans-serif;
+text-align: center;
 }
 
 .logo {
@@ -15,15 +17,16 @@ font-family: 'Orbitron', sans-serif;
   max-width: 500px;
 }
 
-.container {
+.main {
   background-color: rgba(246, 246, 246, 0.95);
   max-width: 530px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 .output {
 font-family: 'Orbitron', sans-serif;
 text-align: center;
-display: none;
+visibility: hidden;
 max-width: 168px;
 padding: 30px;
 border: solid 1px #ff00de;
@@ -35,18 +38,19 @@ top: -329px;
 h1 {
 color: #ffffff;
 position:relative;
+margin-bottom: 22px;
 top: -11px;
-left: 31px;
+left: 3px;
 font-size: 53px;
 }
 
 .btn {
-  color: #ff00de;
-  background: rgba(246, 246, 246);
-  border: solid 1px #ff00de;
+  margin-left: 207px;
+  background: #ff00de;
+  color:#fff;
 }
 
-h1, .btn{
+h1{
 -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
 -moz-animation: neon6 1.5s ease-in-out infinite alternate;
   animation: neon6 1.5s ease-in-out infinite alternate;
@@ -57,12 +61,36 @@ h1:hover {
 }
 
 .btn:hover{
-  background: #ff00de;
   color:#fff;
+  -webkit-animation: button 1.5s ease-in-out infinite alternate;
+  -moz-animation: button 1.5s ease-in-out infinite alternate;
+  animation: button 1.5s ease-in-out infinite alternate;
 }
 
+.easter-egg {
+  display:  none;
+  margin-left: 0;
+  padding-left: 0;
+}
 
+.black {
+  background-color: black;
+  overflow: hidden;
+}
 
+#background {
+  position: relative;
+  width: 167%;
+  z-index: 100;
+}
+
+#video {
+  position: relative;
+  top: -605px;
+  left: 826px;
+  z-index: 1;
+  width: 169px;
+}
 
 @-webkit-keyframes neon6 {
   from {
@@ -79,5 +107,25 @@ h1:hover {
   }
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+/* button animation */
+
+@-webkit-keyframes button {
+  from {
+  box-shadow: 0 0 2px #ff9df8, 0 0 5px #ff9df8, 0 0 7px #ff9df8, 0 0 10px #ff00de, 0 0 16px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 35px #ff00de;
+  }
+  to {
+    box-shadow: 0 0 1px #ff9df8, 0 0 2px #ff9df8, 0 0 3px #ff9df8, 0 0 5px #ff00de, 0 0 8px #ff00de, 0 0 9px #ff00de, 0 0 12px #ff00de, 0 0 16px #ff00de;
+  }
+}
+
+@-moz-keyframes button {
+  from {
+  box-shadow: 0 0 2px #ff9df8, 0 0 5px #ff9df8, 0 0 7px #ff9df8, 0 0 10px #ff00de, 0 0 16px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 35px #ff00de;
+  }
+  to {
+    box-shadow: 0 0 1px #ff9df8, 0 0 2px #ff9df8, 0 0 3px #ff9df8, 0 0 5px #ff00de, 0 0 8px #ff00de, 0 0 9px #ff00de, 0 0 12px #ff00de, 0 0 16px #ff00de;
   }
 }

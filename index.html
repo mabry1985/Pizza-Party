@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <title>Pizza Party HQ</title>
   </head>
-  <body>
-    <div class="container">
+  <body class="backdrop">
+    <div class="main container">
       <div class="logo">
         <img class="banner" src="img/banner.jpg" alt="">
         <h1>Pizza Party HQ</h1>
@@ -59,12 +59,20 @@
           <input type="checkbox" name="topping" value=1>Tomatoes<br>
         </div>
 
-        <button class="btn" type="submit">Add to your order</button>
+        <button class="btn" type="submit">Checkout</button>
       </div>
       </form>
       <div>
         <p class="output"></p>
       </div>
+    </div>
+    <div class="easter-egg container">
+      <img id="background" src="easter-egg/background.png" alt="">
+      <video id="video" width="320" height="240" autoplay muted loop>
+    <source src="easter-egg/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
     </div>
   </body>
 </html>
