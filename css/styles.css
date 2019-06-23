@@ -107,15 +107,16 @@ input[name="topping"] {
 #background {
   position: relative;
   width: 167%;
-  z-index: 100;
+  z-index: 1050;
+  bottom: 34px;
 }
 
 #video {
   position: relative;
-  top: -605px;
-  left: 826px;
-  z-index: 1;
-  width: 169px;
+  bottom: 639px;
+  left: 818px;
+  z-index: 1042;
+  max-width: 176px;
 }
 
 @-webkit-keyframes neon6 {
@@ -156,16 +157,27 @@ input[name="topping"] {
   }
 }
 
- @media (min-width: 992px) and (max-width: 1199.98px) {
+@media screen and (min-width: 992px) and (max-width: 1199.97px) {
 
 #background {
   left: -175px;
 }
 
 #video {
-  top: -520px;
+  top: -553px;
   left: 502px;
   width: 154px;
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1599.97px) {
+
+#background {
+  left: -175px;
+}
+
+#video {
+  top: -553px;
+  left: 502px;
+  width: 154px;
+}
 }

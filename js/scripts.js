@@ -45,6 +45,8 @@ function easterEgg(name) {
     music.setAttribute('src', './easter-egg/tmnt.wav');
     music.volume = 0.1;
     music.play();
+  } else {
+    $('#modal').modal('show');
   }
 };
 
@@ -57,7 +59,6 @@ $(document).ready(function () {
     event.preventDefault();
     var nameInput = $('input.name').val();
     easterEgg(nameInput);
-    $('#modal').modal('show');
     $('.output').html(nameInput + '<br>Your total is: <br> <strong>$'
     + pizza1.cost() + '</strong>');
   });
