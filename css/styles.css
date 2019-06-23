@@ -129,3 +129,17 @@ h1:hover {
     box-shadow: 0 0 1px #ff9df8, 0 0 2px #ff9df8, 0 0 3px #ff9df8, 0 0 5px #ff00de, 0 0 8px #ff00de, 0 0 9px #ff00de, 0 0 12px #ff00de, 0 0 16px #ff00de;
   }
 }
+
+ @media (min-width: 992px) and (max-width: 1199.98px) {
+
+#background {
+  left: -175px;
+}
+
+#video {
+  top: -520px;
+  left: 502px;
+  width: 154px;
+}
+
+}
