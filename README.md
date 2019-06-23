@@ -32,10 +32,10 @@ _mabry1985@gmail.com_
 
 ## Technologies Used
 
-*_HTML_
-*_CSS_
-*_JavaScript_
-*_jQuery_
+* _HTML_
+* _CSS_
+* _JavaScript_
+* _jQuery_
 
 ### License
 
