@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <script src="js/jquery-3.4.1.js" charset="utf-8"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
+    <script src="js/bootstrap.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
@@ -16,11 +17,12 @@
         <h1>Pizza Party HQ</h1>
       </div>
       <h4>Build Your Own PARTY!!!!</h4>
-      <h5>Select Your PARTY Size!!!!</h5>
       <form class="form-one">
         <div class="form-group">
-        <label for="name">Enter Your Name</label>
-        <input class="name" type="text" name="name">
+          <div align="center">
+            <input class="name" type="text" name="name" value="    Enter your name here">
+          </div>
+        <h5>Select Your PARTY Size!!!!</h5>
         <div class="radio">
           <label>
             <input type="radio" name="size"  value=12 checked>
@@ -40,39 +42,46 @@
           </label>
         </div>
         <h5>Select your PARTY toppings!!!</h5>
-        <div class="meat">
-          <input type="checkbox" name="topping" value=2>Extra Cheese - $2.00<br>
-          <input type="checkbox" name="topping" value=1>Extra Sauce - $1.00<br>
-          <h5>Meat $2.00 each</h5>
-          <input type="checkbox" name="topping" value=2> Pepperoni<br>
-          <input type="checkbox" name="topping" value=2>Sausage<br>
-          <input type="checkbox" name="topping" value=2>Ham<br>
-        </div>
-        <div class='veggies'>
-          <h5>Veggie/Fruit $1.00 each</h5>
-          <input type="checkbox" name="topping" value=1>Onion<br>
-          <input type="checkbox" name="topping" value=1>Red Pepper<br>
-          <input type="checkbox" name="topping" value=1>Mushrooms<br>
-          <input type="checkbox" name="topping" value=1>Crushed Garlic<br>
-          <input type="checkbox" name="topping" value=1>Pineapple<br>
-          <input type="checkbox" name="topping" value=1>Jalepe&#241;o<br>
-          <input type="checkbox" name="topping" value=1>Tomatoes<br>
-        </div>
-
+        <div align="center" class= "row">
+            <div class="meat col-md-6">
+            <h5>Extra Stuff</h5>
+            <input type="checkbox" name="topping" value=2>Extra Cheese - $2.00<br>
+            <input type="checkbox" name="topping" value=1>Extra Sauce - $1.00<br>
+            <h5>Meat $2.00 each</h5>
+            <input type="checkbox" name="topping" value=2> Pepperoni<br>
+            <input type="checkbox" name="topping" value=2>Sausage<br>
+            <input type="checkbox" name="topping" value=2>Ham<br>
+          </div>
+          <div class='col-md-6 veggies'>
+            <h5>Veggie/Fruit $1.00 each</h5>
+            <input type="checkbox" name="topping" value=1>Onion<br>
+            <input type="checkbox" name="topping" value=1>Red Pepper<br>
+            <input type="checkbox" name="topping" value=1>Mushrooms<br>
+            <input type="checkbox" name="topping" value=1>Crushed Garlic<br>
+            <input type="checkbox" name="topping" value=1>Pineapple<br>
+            <input type="checkbox" name="topping" value=1>Jalepe&#241;o<br>
+            <input type="checkbox" name="topping" value=1>Tomatoes<br>
+          </div>
         <button class="btn" type="submit">Checkout</button>
       </div>
-      </form>
-      <div>
-        <p class="output"></p>
       </div>
-    </div>
-    <div class="easter-egg container">
+      </form>
+      <div class="easter-egg container">
       <img id="background" src="easter-egg/background.png" alt="">
       <video id="video" width="320" height="240" autoplay muted loop>
     <source src="easter-egg/video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
+    </div>
+    <div id="modal" class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">PARTY ON!!!</h4>
+      </div>
+      <div class="modal-body">
+        <p class="output"></p>
+      </div>
     </div>
   </body>
 </html>

@@ -57,9 +57,9 @@ $(document).ready(function () {
     event.preventDefault();
     var nameInput = $('input.name').val();
     easterEgg(nameInput);
-    $('.output').css('visibility', 'visible');
-    $('.output').html(nameInput + ' Your total is: <br> <strong>$ '
-    + pizza1.cost() + '</strong><br>PARTY ON!!!!!!');
-
+    $('#modal').modal('show');
+    $('.output').html(nameInput + '<br>Your total is: <br> <strong>$'
+    + pizza1.cost() + '</strong>');
   });
+
 });
