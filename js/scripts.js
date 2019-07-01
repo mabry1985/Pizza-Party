@@ -20,7 +20,6 @@ Pizza.prototype.cost = function (size) {
   });
 
   this.total = toppingTotal + size;
-  return this.total;
 };
 
 function easterEgg(name) {
@@ -53,9 +52,11 @@ $(document).ready(function () {
 
     var sizeInput = parseInt($('input:radio[name=size]:checked').val());
     var nameInput = $('input.name').val();
+    pizza1.cost(sizeInput);
     easterEgg(nameInput);
+
     $('.output').html(nameInput + '<br>Your total is: <br> <strong>$'
-    + pizza1.cost(sizeInput) + '</strong>');
+    + pizza1.total + '</strong>');
   });
 
 });
